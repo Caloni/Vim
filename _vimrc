@@ -155,4 +155,3 @@ inoremap <C-d> <Del>
 syntax on
 set background=dark
 colorscheme desert
-set viminfo='0,\"0,\/0,:0,f0
