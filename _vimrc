@@ -111,13 +111,10 @@ vnoremap <C-a> :call Incr()<CR>
 map <F1> di{{c1::<Esc>pa}}<Esc>F1
 map <F3> :set hlsearch!<CR>
 map <F5> :cd %:p:h<CR>
-inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
-cnoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
+inoremap <F5> <C-R>=strftime("%Y%m%d %H%M%S")<CR>
 map <F8> :cn<CR>
 map <F12> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 map <C-F4> :bd<CR>
-inoremap <C-F5> <C-R>=strftime("%y%m%d%H%M")<CR>
-cnoremap <C-F5> <C-R>=strftime("%y%m%d%H%M")<CR>
 map <C-F6> :w<CR>:A<CR>
 map <Leader>a :e ++enc=latin1<CR>
 map <Leader>u :e ++enc=utf-8<CR>
@@ -158,3 +155,4 @@ inoremap <C-d> <Del>
 syntax on
 set background=dark
 colorscheme desert
+set viminfo='0,\"0,\/0,:0,f0
