@@ -1,39 +1,129 @@
-set nocompatible
-set undolevels=1000
-set autoindent
-set smarttab
-set ignorecase
-set smartcase
-set shiftwidth=4
-set shiftround
-set tabstop=4
-set softtabstop=4
-set expandtab
-set nrformats=hex
+au VimEnter * set laststatus=2
+autocmd BufEnter * lcd %:p:h
+ca mru MRU
+colorscheme desert
+ia c_ c_str()
+imap <C-F> <C-X><C-F>
+imap <C-Space> <C-C>
+inoremap <C-d> <Del>
+inoremap <F5> <C-R>=strftime("%Y%m%d %H%M%S")<CR>
+inoremap <S-F5> <C-R>=strftime("%H:%M:%S")<CR>
 let MRU_Max_Entries = 5000
-set backspace=2
-set exrc
-set cino=t0
+map <C-E><C-W> :set wrap! lbr<CR>
+map <C-F12> :NextColorScheme<CR>
+map <C-F4> :bd<CR>
+map <C-F6> :w<CR>:A<CR>
+map <C-H> :exe "ptjump " . expand("<cword>")<CR>
+map <C-Insert> "+y
+map <C-J> :tnext<CR>
+map <C-K> <C-]>
+map <C-L> "syiw/
+map <C-N> :enew<CR>
+map <C-R><C-W> :set list!<CR>
+map <C-S-tab> :bp<CR>
+map <C-S> :w<CR>
+map <C-Space> :!
+map <C-T> :tabedit %<CR>
+map <C-Z> :buffers<CR>:buffer<Space>
+map <C-_> "syiw:vimg /\<<C-R>s\>/ 
+map <C-tab> :bn<CR>
+map <Esc> :pclose<CR>
+map <F12> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
+map <F1> di{{c1::<Esc>pa}}<Esc>F1
+map <F3> :set hlsearch!<CR>
+map <F5> :cd %:p:h<CR>
+map <F8> :cn<CR>
+map <Leader>a :e ++enc=latin1<CR>
+map <Leader>u :e ++enc=utf-8<CR>
+map <S-Del> "+d
+map <S-F12> :PrevColorScheme<CR>
+map <S-F1> T:d2F{f}2x
+map <S-F5> :!ctags --tag-relative=yes --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q<CR>
+map <S-F8> :cp<CR>
+map <S-Insert> "+p
+map <S-L> "syiw?
+map <S-Space> "syiw:%s/
+map <S-tab> :tabNext<CR>
+map <Space> :
+map <tab> :b #<CR>
+nmap j gj
+nmap k gk
+nnoremap <C-Left> g-<CR>
+nnoremap <C-PageDown> :if &go=~#'b'<Bar>set go-=b<Bar>else<Bar>set go+=b<Bar>endif<CR>
+nnoremap <C-PageUp> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
+nnoremap <C-Right> g+<CR>
+set autochdir
+set autoindent
 set autowriteall
+set background=dark
+set backspace=2
+set backup
+set backupdir=$VIM/vimfiles/backup
+set cino=t0
+set cmdheight=2
+set complete=.,b,t
+set directory=.,$TEMP
+set display+=lastline
+set expandtab
+set exrc
+set guitablabel=%t
+set guitabtooltip=%F
 set hidden
+set history=100
+set hlsearch
+set ignorecase
+set incsearch
+set listchars=eol:¶,tab:›…,trail:_
+set nocompatible
+set nrformats=hex
+set number
+set path=.
+set printoptions=syntax:y
+set ruler
+set shiftround
+set shiftwidth=4
+set showfulltag
+set smartcase
+set smarttab
+set softtabstop=4
+set statusline +=%m
+set statusline +=%n
+set statusline +=\ %=
+set statusline +=\ %F
+set statusline +=\ %P
+set statusline +=\ %l,%c
+set statusline=
+set tabstop=4
+set tags=tags;
+set undodir=$VIM/vimfiles/undo
+set undofile
+set undolevels=1000
+set undolevels=1000
+set undoreload=10000
+set ve=block
+set viminfo='20,\"50
+set visualbell
+set wildmenu
+set wrap lbr
+syntax on
+vmap <C-L> "sy/
+vmap <C-_> "sy:vimg /\<<C-R>s\>/ 
+vmap <S-L> "sy?
+vmap <S-Space> "sy:%s/
+
 if exists('&selection')
   set selection=exclusive
 endif
-set incsearch
-set hlsearch
-set autochdir
-set visualbell
-set cmdheight=2
-au VimEnter * set laststatus=2
-set ruler
-set viminfo='20,\"50
-set path=.
-map <C-E><C-W> :set wrap! lbr<CR>
-set history=100
-set number
-set wildmenu
-set tags=tags;
-set complete=.,b,t
+
+function! Incr()
+  let a = line('.') - line("'<")
+  let c = virtcol("'<")
+  if a > 0
+    execute 'normal! '.c.'|'.a."\<C-a>"
+  endif
+  normal `<
+endfunction
+vnoremap <C-a> :call Incr()<CR>
 
 if has("gui_running")
     set guifont=Consolas:h13
@@ -64,94 +154,3 @@ else
     endif
 endif
 
-map <C-Insert> "+y
-map <S-Insert> "+p
-map <S-Del> "+d
-map <Space> :
-map <C-Space> :!
-map <S-Space> "syiw:%s/
-vmap <S-Space> "sy:%s/
-imap <C-Space> <C-C>
-map <C-tab> :bn<CR>
-map <C-S-tab> :bp<CR>
-map <tab> :b #<CR>
-map <S-tab> :tabNext<CR>
-map <C-_> "syiw:vimg /\<<C-R>s\>/ 
-vmap <C-_> "sy:vimg /\<<C-R>s\>/ 
-map <C-L> "syiw/
-vmap <C-L> "sy/
-map <S-L> "syiw?
-vmap <S-L> "sy?
-imap <C-F> <C-X><C-F>
-map <C-S> :w<CR>
-map <C-K> <C-]>
-map <C-J> :tnext<CR>
-map <C-H> :exe "ptjump " . expand("<cword>")<CR>
-map <Esc> :pclose<CR>
-map <C-E><C-W> :set wrap! lbr<CR>
-map <C-R><C-W> :set list!<CR>
-map <C-T> :tabedit %<CR>
-nnoremap <C-PageUp> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
-nnoremap <C-PageDown> :if &go=~#'b'<Bar>set go-=b<Bar>else<Bar>set go+=b<Bar>endif<CR>
-nnoremap <C-Left> g-<CR>
-nnoremap <C-Right> g+<CR>
-map <C-N> :enew<CR>
-map <C-Z> :buffers<CR>:buffer<Space>
-
-function! Incr()
-  let a = line('.') - line("'<")
-  let c = virtcol("'<")
-  if a > 0
-    execute 'normal! '.c.'|'.a."\<C-a>"
-  endif
-  normal `<
-endfunction
-vnoremap <C-a> :call Incr()<CR>
-
-map <F1> di{{c1::<Esc>pa}}<Esc>F1
-map <F3> :set hlsearch!<CR>
-map <F5> :cd %:p:h<CR>
-inoremap <F5> <C-R>=strftime("%Y%m%d %H%M%S")<CR>
-map <F8> :cn<CR>
-map <F12> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
-map <C-F4> :bd<CR>
-map <C-F6> :w<CR>:A<CR>
-map <Leader>a :e ++enc=latin1<CR>
-map <Leader>u :e ++enc=utf-8<CR>
-map <C-F12> :NextColorScheme<CR>
-map <S-F1> T:d2F{f}2x
-map <S-F5> :!ctags --tag-relative=yes --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q<CR>
-inoremap <S-F5> <C-R>=strftime("%H:%M:%S")<CR>
-map <S-F8> :cp<CR>
-map <S-F12> :PrevColorScheme<CR>
-set backup
-set backupdir=$VIM/vimfiles/backup
-set undodir=$VIM/vimfiles/undo
-set undofile
-set undolevels=1000
-set undoreload=10000
-set listchars=eol:¶,tab:›…,trail:_
-set showfulltag
-set display+=lastline
-set printoptions=syntax:y
-set ve=block
-set wrap lbr
-autocmd BufEnter * lcd %:p:h
-set statusline=
-set statusline +=%n
-set statusline +=\ %F
-set statusline +=%m
-set statusline +=\ %=
-set statusline +=\ %l,%c
-set statusline +=\ %P
-set guitablabel=%t
-set guitabtooltip=%F
-ia c_ c_str()
-ca mru MRU
-nmap j gj
-nmap k gk
-set directory=.,$TEMP
-inoremap <C-d> <Del>
-syntax on
-set background=dark
-colorscheme desert
