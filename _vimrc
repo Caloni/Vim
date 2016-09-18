@@ -1,49 +1,34 @@
 au VimEnter * set laststatus=2
 autocmd BufEnter * lcd %:p:h
 ca mru MRU
+cnoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
 colorscheme desert
 ia c_ c_str()
 imap <C-F> <C-X><C-F>
-imap <C-Space> <C-C>
-inoremap <C-d> <Del>
-inoremap <F5> <C-R>=strftime("%Y%m%d %H%M%S")<CR>
-inoremap <S-F5> <C-R>=strftime("%H:%M:%S")<CR>
+inoremap <C-F5> <C-R>=strftime("%Y%m%d %H%M%S")<CR>
 let MRU_Max_Entries = 5000
 map <C-E><C-W> :set wrap! lbr<CR>
-map <C-F12> :NextColorScheme<CR>
 map <C-F4> :bd<CR>
-map <C-F6> :w<CR>:A<CR>
 map <C-H> :exe "ptjump " . expand("<cword>")<CR>
 map <C-Insert> "+y
 map <C-J> :tnext<CR>
 map <C-K> <C-]>
-map <C-L> "syiw/
 map <C-N> :enew<CR>
-map <C-R><C-W> :set list!<CR>
 map <C-S-tab> :bp<CR>
-map <C-S> :w<CR>
 map <C-Space> :!
-map <C-T> :tabedit %<CR>
 map <C-Z> :buffers<CR>:buffer<Space>
 map <C-_> "syiw:vimg /\<<C-R>s\>/ 
 map <C-tab> :bn<CR>
 map <Esc> :pclose<CR>
 map <F12> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
-map <F1> di{{c1::<Esc>pa}}<Esc>F1
-map <F3> :set hlsearch!<CR>
 map <F5> :cd %:p:h<CR>
 map <F8> :cn<CR>
 map <Leader>a :e ++enc=latin1<CR>
 map <Leader>u :e ++enc=utf-8<CR>
 map <S-Del> "+d
-map <S-F12> :PrevColorScheme<CR>
-map <S-F1> T:d2F{f}2x
 map <S-F5> :!ctags --tag-relative=yes --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q<CR>
 map <S-F8> :cp<CR>
 map <S-Insert> "+p
-map <S-L> "syiw?
-map <S-Space> "syiw:%s/
-map <S-tab> :tabNext<CR>
 map <Space> :
 map <tab> :b #<CR>
 nmap j gj
@@ -98,7 +83,6 @@ set tags=tags;
 set undodir=$VIM/vimfiles/undo
 set undofile
 set undolevels=1000
-set undolevels=1000
 set undoreload=10000
 set ve=block
 set viminfo='20,\"50
@@ -106,10 +90,6 @@ set visualbell
 set wildmenu
 set wrap lbr
 syntax on
-vmap <C-L> "sy/
-vmap <C-_> "sy:vimg /\<<C-R>s\>/ 
-vmap <S-L> "sy?
-vmap <S-Space> "sy:%s/
 
 if exists('&selection')
   set selection=exclusive
