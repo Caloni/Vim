@@ -32,7 +32,7 @@ map <C-E><C-W> :set wrap! lbr<CR>
 set history=100
 set number
 set wildmenu
-set tags=./tags,~/vim/tags/temp/tags,~/vim/tags/default/tags
+set tags=tags;
 set complete=.,b,t
 
 if has("gui_running")
@@ -120,13 +120,13 @@ map <Leader>a :e ++enc=latin1<CR>
 map <Leader>u :e ++enc=utf-8<CR>
 map <C-F12> :NextColorScheme<CR>
 map <S-F1> T:d2F{f}2x
-map <S-F5> :!ctagsauto %:p:h temp<CR>
+map <S-F5> :!ctags --tag-relative=yes --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q<CR>
 inoremap <S-F5> <C-R>=strftime("%H:%M:%S")<CR>
 map <S-F8> :cp<CR>
 map <S-F12> :PrevColorScheme<CR>
 set backup
-set backupdir=~\Vim\backup
-set undodir=~\Vim\undo
+set backupdir=$VIM/vimfiles/backup
+set undodir=$VIM/vimfiles/undo
 set undofile
 set undolevels=1000
 set undoreload=10000
