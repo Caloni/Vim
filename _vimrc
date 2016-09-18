@@ -22,11 +22,13 @@ map <C-tab> :bn<CR>
 map <Esc> :pclose<CR>
 map <F12> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 map <F5> :cd %:p:h<CR>
+map <F7> :set makeprg=devenv\ %\ /build\ Debug<CR>
 map <F8> :cn<CR>
 map <Leader>a :e ++enc=latin1<CR>
 map <Leader>u :e ++enc=utf-8<CR>
 map <S-Del> "+d
 map <S-F5> :!ctags --tag-relative=yes --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q<CR>
+map <S-F7> :set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true<CR>
 map <S-F8> :cp<CR>
 map <S-Insert> "+p
 map <Space> :
@@ -49,6 +51,7 @@ set cmdheight=2
 set complete=.,b,t
 set directory=.,$TEMP
 set display+=lastline
+set errorformat=%f(%l)%m
 set expandtab
 set exrc
 set guitablabel=%t
@@ -59,6 +62,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set listchars=eol:¶,tab:›…,trail:_
+set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true
 set nocompatible
 set nrformats=hex
 set number
