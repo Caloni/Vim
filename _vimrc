@@ -11,6 +11,7 @@ inoremap <F5> <C-R>=strftime("%Y%m%d %H%M%S")<CR>
 let MRU_Max_Entries = 5000
 map <C-E><C-W> :set wrap! lbr<CR>
 map <C-F4> :bd<CR>
+map <C-F6> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 map <C-H> :exe "ptjump " . expand("<cword>")<CR>
 map <C-Insert> "+y
 map <C-J> :tnext<CR>
