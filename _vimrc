@@ -65,7 +65,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set listchars=eol:¶,tab:›…,trail:_
-set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true
+set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true\ %
 set nocompatible
 set nrformats=hex
 set number
