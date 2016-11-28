@@ -1,13 +1,13 @@
 au VimEnter * set laststatus=2
 autocmd BufEnter * lcd %:p:h
 ca mru MRU
-cnoremap <F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
-cnoremap <C-F5> <C-R>=strftime("%Y-%m-%d")<CR>
+cnoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
+cnoremap <C-F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 colorscheme desert
 ia c_ c_str()
 imap <C-F> <C-X><C-F>
-inoremap <F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
-inoremap <C-F5> <C-R>=strftime("%Y-%m-%d")<CR>
+inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
+inoremap <C-F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 let MRU_Max_Entries = 5000
 map <C-E><C-W> :set wrap! lbr<CR>
 map <C-F4> :bd<CR>
