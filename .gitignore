@@ -1,3 +1,4 @@
-vim80/
+vim*/
 undo/
 backup/
+.netrwhist
