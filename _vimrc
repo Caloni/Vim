@@ -140,4 +140,4 @@ else
     endif
 endif
 
-colorscheme newsprint
+colorscheme matrix

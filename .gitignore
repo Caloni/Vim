@@ -1,3 +1,4 @@
+*.swp
 vim80/
 undo/
 backup/
