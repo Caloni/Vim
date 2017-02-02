@@ -3,7 +3,7 @@ autocmd BufEnter * lcd %:p:h
 ca mru MRU
 cnoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
 cnoremap <C-F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
-colorscheme desert
+colorscheme default
 ia c_ c_str()
 imap <C-F> <C-X><C-F>
 inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
