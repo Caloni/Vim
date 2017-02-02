@@ -22,6 +22,8 @@ map <C-Z> :buffers<CR>:buffer<Space>
 map <C-_> "syiw:vimg /\<<C-R>s\>/ 
 map <C-tab> :bn<CR>
 map <Esc> :pclose<CR>
+map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
+map <C-F11> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
 map <F12> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 map <F5> :cd %:p:h<CR>
 map <F7> :set makeprg=devenv\ %\ /build\ Debug<CR>
