@@ -143,3 +143,4 @@ else
 endif
 
 colorscheme matrix
+syntax off
