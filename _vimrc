@@ -16,6 +16,7 @@ map <C-Insert> "+y
 map <C-J> :tnext<CR>
 map <C-K> <C-]>
 map <C-N> :enew<CR>
+map <C-G> :echo expand('%:p')<CR>
 map <C-S-tab> :bp<CR>
 map <C-Space> :!
 map <C-Z> :buffers<CR>:buffer<Space>
