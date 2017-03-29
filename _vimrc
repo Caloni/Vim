@@ -70,7 +70,7 @@ set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true\ %
 set nocompatible
 set nrformats=hex
 set number
-set path=.
+set path=.,c:\\Program\\\ Files\\\ (x86)\Microsoft\\\ Visual\\\ Studio\\2017\\Enterprise\\VC\\Tools\\MSVC\\14.10.24930\\include,c:/Libs/WinDDK/6001.18001/inc/**/
 set printoptions=syntax:y
 set ruler
 set shiftround
@@ -87,7 +87,7 @@ set statusline +=\ %P
 set statusline +=\ %l,%c
 set statusline=
 set tabstop=4
-set tags=tags;
+set tags=tags;,c:/Vim/vimfiles/tags/**/tags
 set undodir=$VIM/vimfiles/undo
 set undofile
 set undolevels=1000
