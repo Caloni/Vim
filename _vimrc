@@ -29,7 +29,7 @@ map <F8> :cn<CR>
 map <Leader>a :e ++enc=latin1<CR>
 map <Leader>u :e ++enc=utf-8<CR>
 map <S-Del> "+d
-map <S-F5> :!ctags --tag-relative=yes --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q<CR>
+map <S-F5> :!ctags --tag-relative=no --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q<CR>
 map <S-F7> :set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true\ %<CR>
 map <S-F8> :cp<CR>
 map <S-Insert> "+p
@@ -87,7 +87,7 @@ set statusline +=\ %P
 set statusline +=\ %l,%c
 set statusline=
 set tabstop=4
-set tags=tags;,c:/Vim/vimfiles/tags/**/tags
+set tags=tags;
 set undodir=$VIM/vimfiles/undo
 set undofile
 set undolevels=1000
