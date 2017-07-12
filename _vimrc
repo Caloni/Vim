@@ -1,6 +1,9 @@
 au VimEnter * set laststatus=2
 autocmd BufEnter * lcd %:p:h
 ca mru MRU
+ca cineup silent !update.py %
+ca cinepost silent !post.py %
+ca devenv silent !devenv %
 cnoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
 cnoremap <C-F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 ia c_ c_str()
