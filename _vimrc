@@ -1,9 +1,6 @@
 au VimEnter * set laststatus=2
 autocmd BufEnter * lcd %:p:h
 ca mru MRU
-ca cineup silent !update.py %
-ca cinepost silent !post.py %
-ca devenv silent !devenv %
 cnoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
 cnoremap <C-F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 ia c_ c_str()
@@ -32,7 +29,7 @@ map <F8> :cn<CR>
 map <Leader>a :e ++enc=latin1<CR>
 map <Leader>u :e ++enc=utf-8<CR>
 map <S-Del> "+d
-map <S-F5> :!ctags --tag-relative=no --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q<CR>
+map <S-F5> :!ctags --tag-relative=no --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q --exclude=libs<CR>
 map <S-F7> :set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true\ %<CR>
 map <S-F8> :cp<CR>
 map <S-Insert> "+p
