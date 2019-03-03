@@ -15,7 +15,7 @@ map <C-E><C-W> :set wrap! lbr<CR>
 map <C-F4> :bd<CR>
 map <C-F6> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 map <C-H> :exe "ptjump " . expand("<cword>")<CR>
-" yank to the system register instead of the anonymous one (_)
+" yank to the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <C-Insert> "+y
 map <C-J> :tnext<CR>
 map <C-K> <C-]>
@@ -34,12 +34,12 @@ map <F8> :cn<CR>
 " reopen the buffer using specific encoding (a for ascii, u for unicode)
 map <Leader>a :e ++enc=latin1<CR>
 map <Leader>u :e ++enc=utf-8<CR>
-" delete to the system register instead of the anonymous one (_)
+" delete to the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <S-Del> "+d
 map <S-F5> :!ctags --tag-relative=no --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q --exclude=libs<CR>
 map <S-F7> :set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true\ /p:Configuration=$Config\ /p:Platform=$Platform\ %<CR>
 map <S-F8> :cp<CR>
-" insert from the system register instead of the anonymous one (_)
+" insert from the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <S-Insert> "+p
 " map command mode space to almost used colon (:) signal
 map <Space> :
