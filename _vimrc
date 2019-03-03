@@ -88,7 +88,6 @@ set viminfo='20,\"50
 set visualbell
 set wildmenu
 set wrap lbr
-syntax on
 
 function! Incr()
   let a = line('.') - line("'<")
@@ -106,8 +105,11 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=m
     set guioptions+=r
+    " syntax on is needed to au GUIEnter bellow; otherwise will generate menu.vim error
+    syntax on
     " when entering the gui successfully simulate alt key (:simalt) with space (~) and x; this would full screen the window
     au GUIEnter * simalt ~x
+    syntax off
     " shortcut F4 retired; just use !start .
 else
     if exists("+lines")
@@ -119,4 +121,3 @@ else
 endif
 
 colorscheme matrix
-syntax off
