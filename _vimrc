@@ -2,7 +2,6 @@ au VimEnter * set laststatus=2
 autocmd BufEnter * lcd %:p:h
 " using MRU plugin that searches for all files opened before using wildcards
 ca mru MRU
-ia c_ c_str()
 imap <C-F> <C-X><C-F>
 " max entries for plugin MRU
 let MRU_Max_Entries = 5000
