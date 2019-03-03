@@ -32,7 +32,6 @@ map <Space> :
 " go to the last buffer in navegation history
 map <tab> :b #<CR>
 " shortcuts c-pagedown and c-pageup retired; search for set guioptions/go for handle it
-set autochdir
 set autoindent
 set autowriteall
 set background=dark
