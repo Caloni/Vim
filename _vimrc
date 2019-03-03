@@ -90,10 +90,6 @@ set wildmenu
 set wrap lbr
 syntax on
 
-if exists('&selection')
-  set selection=exclusive
-endif
-
 function! Incr()
   let a = line('.') - line("'<")
   let c = virtcol("'<")
