@@ -17,8 +17,6 @@ map <C-Insert> "+y
 map <C-S-tab> :bp<CR>
 " map command mode c-space to colon (:) signal with exclamation to execute something
 map <C-Space> :!
-" list all opened buffers and open the prompt to select one
-map <C-Z> :buffers<CR>:buffer<Space>
 map <C-_> "syiw:vimg /\<<C-R>s\>/ 
 " go to the next buffer
 map <C-tab> :bn<CR>
