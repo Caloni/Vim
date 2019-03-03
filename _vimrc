@@ -6,7 +6,7 @@ ca mru MRU
 let MRU_Max_Entries = 5000
 " toogle word wrap for long lines using visual studio shortcut (with 'breakat' activated intead of last character before the break)
 map <C-E><C-W> :set wrap! lbr<CR>
-" delete current buffer
+" delete current buffer (to delete all buffers except current one: %bd|e#)
 map <C-F4> :bd<CR>
 map <C-F6> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 map <C-H> :exe "ptjump " . expand("<cword>")<CR>
