@@ -2,12 +2,8 @@ au VimEnter * set laststatus=2
 autocmd BufEnter * lcd %:p:h
 " using MRU plugin that searches for all files opened before using wildcards
 ca mru MRU
-cnoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
-cnoremap <C-F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 ia c_ c_str()
 imap <C-F> <C-X><C-F>
-inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
-inoremap <C-F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 " max entries for plugin MRU
 let MRU_Max_Entries = 5000
 " toogle word wrap for long lines using visual studio shortcut (with 'breakat' activated intead of last character before the break)
