@@ -21,11 +21,14 @@ map <C-J> :tnext<CR>
 map <C-K> <C-]>
 map <C-N> :enew<CR>
 map <C-G> :echo expand('%:p')<CR>
+" go to the previous buffer
 map <C-S-tab> :bp<CR>
 " map command mode c-space to colon (:) signal with exclamation to execute something
 map <C-Space> :!
+" list all opened buffers and open the prompt to select one
 map <C-Z> :buffers<CR>:buffer<Space>
 map <C-_> "syiw:vimg /\<<C-R>s\>/ 
+" go to the next buffer
 map <C-tab> :bn<CR>
 map <Esc> :pclose<CR>
 map <F5> :cd %:p:h<CR>
@@ -43,6 +46,7 @@ map <S-F8> :cp<CR>
 map <S-Insert> "+p
 " map command mode space to almost used colon (:) signal
 map <Space> :
+" go to the last buffer in navegation history
 map <tab> :b #<CR>
 nmap j gj
 nmap k gk
