@@ -100,6 +100,10 @@ set autoindent
 "set wildmenu
 " wrap lines and break in words, not chars
 "set wrap lbr
+" the encoding displayed
+set encoding=utf8
+" the encoding written to file
+set fileencoding=utf8
 
 if has("gui_running")
     set guifont=Consolas:h13
