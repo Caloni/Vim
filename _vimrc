@@ -106,6 +106,7 @@ if has("gui_running")
     set guioptions-=T
     set guioptions-=m
     set guioptions+=r
+    " when entering the gui successfully simulate alt key (:simalt) with space (~) and x; this would full screen the window
     au GUIEnter * simalt ~x
     " shortcut F4 retired; just use !start .
 else
