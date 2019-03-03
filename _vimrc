@@ -1,5 +1,6 @@
 au VimEnter * set laststatus=2
 autocmd BufEnter * lcd %:p:h
+" using MRU plugin that searches for all files opened before using wildcards
 ca mru MRU
 cnoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
 cnoremap <C-F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
@@ -7,17 +8,21 @@ ia c_ c_str()
 imap <C-F> <C-X><C-F>
 inoremap <F5> <C-R>=strftime("%Y-%m-%d")<CR>
 inoremap <C-F5> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
+" max entries for plugin MRU
 let MRU_Max_Entries = 5000
+" toogle word wrap for long lines using visual studio shortcut (with 'breakat' activated intead of last character before the break)
 map <C-E><C-W> :set wrap! lbr<CR>
 map <C-F4> :bd<CR>
 map <C-F6> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 map <C-H> :exe "ptjump " . expand("<cword>")<CR>
+" yank to the system register instead of the anonymous one (_)
 map <C-Insert> "+y
 map <C-J> :tnext<CR>
 map <C-K> <C-]>
 map <C-N> :enew<CR>
 map <C-G> :echo expand('%:p')<CR>
 map <C-S-tab> :bp<CR>
+" map command mode c-space to colon (:) signal with exclamation to execute something
 map <C-Space> :!
 map <C-Z> :buffers<CR>:buffer<Space>
 map <C-_> "syiw:vimg /\<<C-R>s\>/ 
@@ -26,13 +31,17 @@ map <Esc> :pclose<CR>
 map <F5> :cd %:p:h<CR>
 map <F7> :set makeprg=devenv\ %\ /build\ $Config<CR>
 map <F8> :cn<CR>
+" reopen the buffer using specific encoding (a for ascii, u for unicode)
 map <Leader>a :e ++enc=latin1<CR>
 map <Leader>u :e ++enc=utf-8<CR>
+" delete to the system register instead of the anonymous one (_)
 map <S-Del> "+d
 map <S-F5> :!ctags --tag-relative=no --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q --exclude=libs<CR>
 map <S-F7> :set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true\ /p:Configuration=$Config\ /p:Platform=$Platform\ %<CR>
 map <S-F8> :cp<CR>
+" insert from the system register instead of the anonymous one (_)
 map <S-Insert> "+p
+" map command mode space to almost used colon (:) signal
 map <Space> :
 map <tab> :b #<CR>
 nmap j gj
