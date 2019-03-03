@@ -34,7 +34,6 @@ map <tab> :b #<CR>
 " shortcuts c-pagedown and c-pageup retired; search for set guioptions/go for handle it
 " indent automatically new line accordingly with the current one
 set autoindent
-set autowriteall
 set background=dark
 set backspace=2
 set backup
