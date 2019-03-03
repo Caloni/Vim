@@ -101,14 +101,19 @@ vnoremap <C-a> :call Incr()<CR>
 
 if has("gui_running")
     set guifont=Consolas:h13
+    " hide the mouse when typing
     set mousehide
+    " remove toolbar
     set guioptions-=T
+    " remove menu
     set guioptions-=m
-    set guioptions+=r
+    " remove right scroll bar
+    set guioptions-=r
     " syntax on is needed to au GUIEnter bellow; otherwise will generate menu.vim error
     syntax on
     " when entering the gui successfully simulate alt key (:simalt) with space (~) and x; this would full screen the window
     au GUIEnter * simalt ~x
+    " back to syntax off; warn: we do not know if was on before
     syntax off
     " shortcut F4 retired; just use !start .
 else
