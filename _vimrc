@@ -19,7 +19,7 @@ map <C-S-tab> :bp<CR>
 map <C-Space> :!
 " go to the next buffer
 map <C-tab> :bn<CR>
-map <F5> :cd %:p:h<CR>
+" shortcut <F5> retired; use :cd %:p:h to set current dir for all buffers, :lcd to only the current buffer
 map <F7> :set makeprg=devenv\ %\ /build\ $Config<CR>
 map <F8> :cn<CR>
 " reopen the buffer using specific encoding (a for ascii, u for unicode)
