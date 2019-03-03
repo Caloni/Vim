@@ -19,7 +19,6 @@ map <C-S-tab> :bp<CR>
 map <C-Space> :!
 " go to the next buffer
 map <C-tab> :bn<CR>
-map <Esc> :pclose<CR>
 map <F5> :cd %:p:h<CR>
 map <F7> :set makeprg=devenv\ %\ /build\ $Config<CR>
 map <F8> :cn<CR>
