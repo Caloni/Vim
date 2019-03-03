@@ -116,13 +116,6 @@ if has("gui_running")
     " back to syntax off; warn: we do not know if was on before
     syntax off
     " shortcut F4 retired; just use !start .
-else
-    if exists("+lines")
-        set lines=50
-    endif
-    if exists("+columns")
-        set columns=100
-    endif
 endif
 
 colorscheme matrix
