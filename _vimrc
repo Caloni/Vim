@@ -32,7 +32,6 @@ map <Space> :
 " go to the last buffer in navegation history
 map <tab> :b #<CR>
 " shortcuts c-pagedown and c-pageup retired; search for set guioptions/go for handle it
-map <C-CR> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
 map <F12> :if &go=~#'m'<Bar>set go-=m<Bar>else<Bar>set go+=m<Bar>endif<CR>
 nnoremap <C-Right> g+<CR>
 set autochdir
