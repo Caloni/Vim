@@ -61,7 +61,7 @@ set autoindent
 " print number line in front of lines
 "set number
 " if you want to navigate thru files outside the current dir use set path=.,<other-dirs> (using / slash for path)
-" show the coordinates for the cursor
+"sshow the coordinates for the cursor
 "set ruler
 " round indent of multiple of shiftwidht
 "set shiftround
