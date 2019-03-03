@@ -34,59 +34,72 @@ map <tab> :b #<CR>
 " shortcuts c-pagedown and c-pageup retired; search for set guioptions/go for handle it
 " indent automatically new line accordingly with the current one
 set autoindent
-set background=dark
-set backspace=2
-set backup
-set backupdir=$VIM/vimfiles/backup
-set cino=t0
-set cmdheight=2
-set complete=.,b,t
-set directory=.,$TEMP
-set display+=lastline
-set errorformat=%f(%l):\ %m
-set expandtab
-set exrc
-set guitablabel=%t
-set guitabtooltip=%F
-set hidden
-set history=100
-set hlsearch
-set ignorecase
-set incsearch
-set listchars=eol:¶,tab:›…,trail:_
-let $Config = 'Debug'
-let $Platform = 'x86'
-set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true\ /p:Configuration=$Config\ /p:Platform=$Platform\ %
-set nocompatible
-set nrformats=hex
-set number
+" changes the way c is indented
+"set cino=t0
+" number of screen lines to use for the command line
+"set cmdheight=2
+" how the autocomplete works
+"set complete=.,b,t
+" directories where to create the swap file (avoids trying to edit read only directory and access errors)
+"set directory=.,$TEMP
+" how displays the text
+"set display+=lastline
+" use the appropriate numbers of spaces to insert a <tab>
+"set expandtab
+" keep the buffer hidden when abandoned
+"set hidden
+" hightlight the last search; nohls disabled and :noh disable only until new search
+"set hlsearch
+" ignore case in search patterns
+"set ignorecase
+" incremental search
+"set incsearch
+" define what chars are shown (tab, space, eol, etc)
+"set listchars=eol:¶,tab:›…,trail:_
+" what number formats to consider to increment
+"set nrformats=hex
+" print number line in front of lines
+"set number
 " if you want to navigate thru files outside the current dir use set path=.,<other-dirs> (using / slash for path)
-set printoptions=syntax:y
-set ruler
-set shiftround
-set shiftwidth=4
-set showfulltag
-set smartcase
-set smarttab
-set softtabstop=4
-set statusline +=%m
-set statusline +=%n
-set statusline +=\ %=
-set statusline +=\ %F
-set statusline +=\ %P
-set statusline +=\ %l,%c
-set statusline=
-set tabstop=4
-set tags=tags;
-set undodir=$VIM/vimfiles/undo
-set undofile
-set undolevels=1000
-set undoreload=10000
-set ve=block
-set viminfo='20,\"50
-set visualbell
-set wildmenu
-set wrap lbr
+" show the coordinates for the cursor
+"set ruler
+" round indent of multiple of shiftwidht
+"set shiftround
+" number of spaces to use for each step of (auto)indent
+"set shiftwidth=4
+" c completion related option
+"set showfulltag
+" override ignorecase option if there is case in the search
+"set smartcase
+" indent related option
+"set smarttab
+" feeling like insert all spaces, but is really mixing up (dependent on expandtab and others)
+"set softtabstop=4
+" statusline options
+"set statusline+=%m
+"set statusline+=%n
+"set statusline+=\ %=
+"set statusline+=\ %F
+"set statusline+=\ %P
+"set statusline+=\ %l,%c
+"set statusline=
+" number of spaces that a <tab> counts for
+"set tabstop=4
+" the tags files to search for
+"set tags=tags;
+" undo related options
+"set undodir=$VIM/vimfiles/undo
+"set undofile
+"set undolevels=1000
+"set undoreload=10000
+" working in visual mode to select columns where it is empty
+"set ve=block
+" visual bell instead of an actual bell
+"set visualbell
+" enhanced the completion menu
+"set wildmenu
+" wrap lines and break in words, not chars
+"set wrap lbr
 
 if has("gui_running")
     set guifont=Consolas:h13
