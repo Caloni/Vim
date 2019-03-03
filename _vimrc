@@ -31,8 +31,6 @@ map <S-Insert> "+p
 map <Space> :
 " go to the last buffer in navegation history
 map <tab> :b #<CR>
-nmap j gj
-nmap k gk
 nnoremap <C-Left> g-<CR>
 nnoremap <C-PageDown> :if &go=~#'b'<Bar>set go-=b<Bar>else<Bar>set go+=b<Bar>endif<CR>
 nnoremap <C-PageUp> :if &go=~#'r'<Bar>set go-=r<Bar>else<Bar>set go+=r<Bar>endif<CR>
