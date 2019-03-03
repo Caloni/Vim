@@ -11,8 +11,7 @@ map <C-F4> :bd<CR>
 " shortcut c-h excluded; use :ptj tag to select a tag and open in a preview window
 " yank to the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <C-Insert> "+y
-map <C-J> :tnext<CR>
-map <C-K> <C-]>
+" shortcuts c-k and c-j excluded; the c-] is working (old c-k) and :tn navigates thru the duplicated tags)
 map <C-N> :enew<CR>
 map <C-G> :echo expand('%:p')<CR>
 " go to the previous buffer
