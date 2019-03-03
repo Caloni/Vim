@@ -108,16 +108,6 @@ if has("gui_running")
     set guioptions+=r
     au GUIEnter * simalt ~x
     " shortcut F4 retired; just use !start .
-    nnoremap <C-Up> :silent! let &guifont = substitute(
-            \ &guifont,
-            \ ':h\zs\d\+',
-            \ '\=eval(submatch(0)+1)',
-            \ '')<CR>
-    nnoremap <C-Down> :silent! let &guifont = substitute(
-            \ &guifont,
-            \ ':h\zs\d\+',
-            \ '\=eval(submatch(0)-1)',
-            \ '')<CR>
 else
     if exists("+lines")
         set lines=50
