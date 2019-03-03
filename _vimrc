@@ -17,7 +17,6 @@ map <C-Insert> "+y
 map <C-S-tab> :bp<CR>
 " map command mode c-space to colon (:) signal with exclamation to execute something
 map <C-Space> :!
-map <C-_> "syiw:vimg /\<<C-R>s\>/ 
 " go to the next buffer
 map <C-tab> :bn<CR>
 map <Esc> :pclose<CR>
