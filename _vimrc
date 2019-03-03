@@ -1,3 +1,4 @@
+" change the local current directory every time enters another buffer
 autocmd BufEnter * lcd %:p:h
 " using MRU plugin that searches for all files opened before using wildcards
 ca mru MRU
