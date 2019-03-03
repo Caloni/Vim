@@ -107,9 +107,7 @@ if has("gui_running")
     set guioptions-=m
     set guioptions+=r
     au GUIEnter * simalt ~x
-    if has("win32")
-      :map <silent> <F4> :if expand("%:p:h") != ""<CR>:!start explorer.exe %:p:h<CR>:endif<CR><CR>
-    endif
+    " shortcut F4 retired; just use !start .
     nnoremap <C-Up> :silent! let &guifont = substitute(
             \ &guifont,
             \ ':h\zs\d\+',
