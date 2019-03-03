@@ -12,7 +12,7 @@ map <C-F4> :bd<CR>
 " yank to the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <C-Insert> "+y
 " shortcuts c-k and c-j excluded; the c-] is working (old c-k) and :tn navigates thru the duplicated tags)
-map <C-G> :echo expand('%:p')<CR>
+" shortcut C-G excluded; use 1C-G to see full path for the current file
 " go to the previous buffer
 map <C-S-tab> :bp<CR>
 " map command mode c-space to colon (:) signal with exclamation to execute something
