@@ -8,7 +8,6 @@ let MRU_Max_Entries = 5000
 map <C-E><C-W> :set wrap! lbr<CR>
 " delete current buffer (to delete all buffers except current one: %bd|e#)
 map <C-F4> :bd<CR>
-map <C-F6> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 map <C-H> :exe "ptjump " . expand("<cword>")<CR>
 " yank to the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <C-Insert> "+y
