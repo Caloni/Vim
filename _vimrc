@@ -61,7 +61,7 @@ set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true\ /p:Configu
 set nocompatible
 set nrformats=hex
 set number
-set path=.,c:\\Program\\\ Files\\\ (x86)\Microsoft\\\ Visual\\\ Studio\\2017\\Enterprise\\VC\\Tools\\MSVC\\14.10.24930\\include,c:/Libs/WinDDK/6001.18001/inc/**/
+" if you want to navigate thru files outside the current dir use set path=.,<other-dirs> (using / slash for path)
 set printoptions=syntax:y
 set ruler
 set shiftround
