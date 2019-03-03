@@ -35,7 +35,6 @@ map <Leader>a :e ++enc=latin1<CR>
 map <Leader>u :e ++enc=utf-8<CR>
 " delete to the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <S-Del> "+d
-map <S-F5> :!ctags --tag-relative=no --recurse --c++-kinds=+p --python-kinds=-i --fields=+iaS --extra=+q --exclude=libs<CR>
 map <S-F7> :set makeprg=msbuild\ /nologo\ /v:q\ /property:GenerateFullPaths=true\ /p:Configuration=$Config\ /p:Platform=$Platform\ %<CR>
 map <S-F8> :cp<CR>
 " insert from the system register instead of the anonymous one (_) warn: not working in terminal vim
