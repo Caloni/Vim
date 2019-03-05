@@ -3,9 +3,11 @@ autocmd BufEnter * lcd %:p:h
 " using MRU plugin that searches for all files opened before using wildcards
 ca mru MRU
 " max entries for plugin MRU
-let MRU_Max_Entries = 5000
+let MRU_Max_Entries = 50000
 " toogle word wrap for long lines using visual studio shortcut (with 'breakat' activated intead of last character before the break)
 map <C-E><C-W> :set wrap! lbr<CR>
+" list all opened buffers and open the prompt to select one
+map <C-Z> :buffers<CR>:buffer<Space>
 " delete current buffer (to delete all buffers except current one: %bd|e#)
 map <C-F4> :bd<CR>
 " shortcut c-h excluded; use :ptj tag to select a tag and open in a preview window
@@ -35,75 +37,74 @@ map <tab> :b #<CR>
 " indent automatically new line accordingly with the current one
 set autoindent
 " changes the way c is indented
-"set cino=t0
-" number of screen lines to use for the command line
-"set cmdheight=2
+set cino=t0
+" avoid to see too much press Enter after executing external commands
+set cmdheight=2
 " how the autocomplete works
-"set complete=.,b,t
+set complete=.,b,t
 " directories where to create the swap file (avoids trying to edit read only directory and access errors)
-"set directory=.,$TEMP
+set directory=.,$TEMP
 " how displays the text
-"set display+=lastline
+set display+=lastline
 " use the appropriate numbers of spaces to insert a <tab>
-"set expandtab
+set expandtab
 " keep the buffer hidden when abandoned
-"set hidden
+set hidden
 " hightlight the last search; nohls disabled and :noh disable only until new search
 set hlsearch
 " ignore case in search patterns
-"set ignorecase
+set ignorecase
 " incremental search
-"set incsearch
-" define what chars are shown (tab, space, eol, etc)
-"set listchars=eol:¶,tab:›…,trail:_
+set incsearch
 " what number formats to consider to increment
 "set nrformats=hex
 " print number line in front of lines
-"set number
+set number
 " if you want to navigate thru files outside the current dir use set path=.,<other-dirs> (using / slash for path)
 "sshow the coordinates for the cursor
-"set ruler
+set ruler
 " round indent of multiple of shiftwidht
-"set shiftround
+set shiftround
 " number of spaces to use for each step of (auto)indent
-"set shiftwidth=4
+set shiftwidth=4
 " c completion related option
-"set showfulltag
+set showfulltag
 " override ignorecase option if there is case in the search
-"set smartcase
+set smartcase
 " indent related option
-"set smarttab
+set smarttab
 " feeling like insert all spaces, but is really mixing up (dependent on expandtab and others)
-"set softtabstop=4
+set softtabstop=4
 " statusline options
-"set statusline+=%m
-"set statusline+=%n
-"set statusline+=\ %=
-"set statusline+=\ %F
-"set statusline+=\ %P
-"set statusline+=\ %l,%c
-"set statusline=
+set statusline+=%m
+set statusline+=%n
+set statusline+=\ %=
+set statusline+=\ %F
+set statusline+=\ %P
+set statusline+=\ %l,%c
 " number of spaces that a <tab> counts for
-"set tabstop=4
+set tabstop=4
 " the tags files to search for
-"set tags=tags;
+set tags=tags;
 " undo related options
-"set undodir=$VIM/vimfiles/undo
-"set undofile
-"set undolevels=1000
-"set undoreload=10000
+set undodir=$VIM/vimfiles/undo
+set undofile
+set undolevels=1000
+set undoreload=10000
 " working in visual mode to select columns where it is empty
-"set ve=block
+set ve=block
 " visual bell instead of an actual bell
-"set visualbell
+set visualbell
 " enhanced the completion menu
-"set wildmenu
+set wildmenu
 " wrap lines and break in words, not chars
-"set wrap lbr
+set wrap lbr
 " the encoding displayed
 set encoding=utf8
 " the encoding written to file
 set fileencoding=utf8
+" allow backspace over autoindent, line breaks and start of insert
+set backspace=indent,eol,start
 
 if has("gui_running")
     set guifont=Consolas:h13
