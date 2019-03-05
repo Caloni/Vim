@@ -49,7 +49,7 @@ set autoindent
 " keep the buffer hidden when abandoned
 "set hidden
 " hightlight the last search; nohls disabled and :noh disable only until new search
-"set hlsearch
+set hlsearch
 " ignore case in search patterns
 "set ignorecase
 " incremental search
