@@ -12,7 +12,7 @@ map <C-Z> :buffers<CR>:buffer<Space>
 map <C-F4> :bd<CR>
 " shortcut c-h excluded; use :ptj tag to select a tag and open in a preview window
 " yank to the system register instead of the anonymous one (_) warn: not working in terminal vim
-map <C-Insert> "+y
+map <Leader>y "+y
 " shortcuts c-k and c-j excluded; the c-] is working (old c-k) and :tn navigates thru the duplicated tags)
 " shortcut C-G excluded; use 1C-G to see full path for the current file
 " go to the previous buffer
@@ -23,9 +23,9 @@ map <C-Space> :!
 map <C-tab> :bn<CR>
 " shortcut <F5> retired; use :cd %:p:h to set current dir for all buffers, :lcd to only the current buffer
 " delete to the system register instead of the anonymous one (_) warn: not working in terminal vim
-map <S-Del> "+d
+map <Leader>d "+d
 " insert from the system register instead of the anonymous one (_) warn: not working in terminal vim
-map <S-Insert> "+p
+map <Leader>p "+p
 " map command mode space to almost used colon (:) signal
 map <Space> :
 " go to the last buffer in navegation history
