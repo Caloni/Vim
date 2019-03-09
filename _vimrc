@@ -22,9 +22,6 @@ map <C-Space> :!
 " go to the next buffer
 map <C-tab> :bn<CR>
 " shortcut <F5> retired; use :cd %:p:h to set current dir for all buffers, :lcd to only the current buffer
-" reopen the buffer using specific encoding (a for ascii, u for unicode)
-map <Leader>a :e ++enc=latin1<CR>
-map <Leader>u :e ++enc=utf-8<CR>
 " delete to the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <S-Del> "+d
 " insert from the system register instead of the anonymous one (_) warn: not working in terminal vim
