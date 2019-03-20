@@ -122,4 +122,4 @@ if has("gui_running")
     " shortcut F4 retired; just use !start .
 endif
 
-colorscheme matrix
+colorscheme paramount
