@@ -1,6 +1,2 @@
+vim*/
 *.swp
-vim80/
-undo/
-backup/
-vimfiles/tags
-.netrwhist
