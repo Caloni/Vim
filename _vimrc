@@ -13,7 +13,9 @@ map <C-F4> :bd<CR>
 " shortcut c-h excluded; use :ptj tag to select a tag and open in a preview window
 " yank to the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <Leader>y "+y
-" shortcuts c-k and c-j excluded; the c-] is working (old c-k) and :tn navigates thru the duplicated tags)
+" go to definition
+map <C-K> <C-]>
+" shortcuts c-j excluded; and :tn navigates thru the duplicated tags)
 " shortcut C-G excluded; use 1C-G to see full path for the current file
 " go to the previous buffer
 map <C-S-tab> :bp<CR>
@@ -120,6 +122,7 @@ if has("gui_running")
     " back to syntax off; warn: we do not know if was on before
     syntax off
     " shortcut F4 retired; just use !start .
+    " color scheme for graphic vim
+    colorscheme paramount
 endif
 
-colorscheme paramount
