@@ -10,12 +10,16 @@ map <C-E><C-W> :set wrap! lbr<CR>
 map <C-Z> :buffers<CR>:buffer<Space>
 " delete current buffer (to delete all buffers except current one: %bd|e#)
 map <C-F4> :bd<CR>
-" shortcut c-h excluded; use :ptj tag to select a tag and open in a preview window
+" select a tag and open in a preview window
+map <C-H> :exe "ptjump " . expand("<cword>")<CR>
+" select a tag before navigating to definition
+map <C-L> :exe "tselect " . expand("<cword>")<CR>
 " yank to the system register instead of the anonymous one (_) warn: not working in terminal vim
 map <Leader>y "+y
 " go to definition
 map <C-K> <C-]>
-" shortcuts c-j excluded; and :tn navigates thru the duplicated tags)
+" navigates thru the duplicated tags
+map <C-J> :tnext<CR>
 " shortcut C-G excluded; use 1C-G to see full path for the current file
 " go to the previous buffer
 map <C-S-tab> :bp<CR>
