@@ -1,0 +1,3 @@
+[submodule "gvimfullscreen_win32"]
+	path = gvimfullscreen_win32
+	url = https://github.com/derekmcloughlin/gvimfullscreen_win32
