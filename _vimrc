@@ -110,6 +110,9 @@ set fileencoding=utf8
 set backspace=indent,eol,start
 
 if has("gui_running")
+    " use gvimfullscreen.dll (renamed) if exists to toggle full screen
+    " dll source: http://github.com/derekmcloughlin/gvimfullscreen_win32/tree/master
+    map <F11> :call libcallnr("fullscreen.dll", "ToggleFullScreen", 0)<CR>
     set guifont=Consolas:h13
     " hide the mouse when typing
     set mousehide
