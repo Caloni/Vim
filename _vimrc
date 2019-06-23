@@ -128,6 +128,18 @@ if has("gui_running")
     " back to syntax off; warn: we do not know if was on before
     syntax off
     " shortcut F4 retired; just use !start .
+    " increase font size
+    nnoremap <C-Up> :silent! let &guifont = substitute(
+            \ &guifont,
+            \ ':h\zs\d\+',
+            \ '\=eval(submatch(0)+1)',
+            \ '')<CR>
+    " decrease font size
+    nnoremap <C-Down> :silent! let &guifont = substitute(
+            \ &guifont,
+            \ ':h\zs\d\+',
+            \ '\=eval(submatch(0)-1)',
+            \ '')<CR>
     " color scheme for graphic vim
     colorscheme paramount
 endif
