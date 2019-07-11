@@ -1,0 +1,3 @@
+[submodule "plugin/gvimfullscreen_win32"]
+	path = plugin/gvimfullscreen_win32
+	url = https://github.com/Caloni/gvimfullscreen_win32
