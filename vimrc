@@ -12,6 +12,8 @@ map <C-Z> :buffers<CR>:buffer<Space>
 map <C-F4> :bd<CR>
 " select a tag and open in a preview window
 map <C-H> :exe "ptjump " . expand("<cword>")<CR>
+" closes the preview window
+map <Esc> :pclose<CR>
 " select a tag before navigating to definition
 map <C-L> :exe "tselect " . expand("<cword>")<CR>
 " yank to the system register instead of the anonymous one (_) warn: not working in terminal vim
