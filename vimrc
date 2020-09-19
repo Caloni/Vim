@@ -31,6 +31,7 @@ set hidden " keep the buffer hidden when abandoned
 set hlsearch " hightlight the last search; nohls disabled and :noh disable only until new search
 set ignorecase " ignore case in search patterns
 set incsearch " incremental search
+set makeprg=cmake\ --build\ .
 set number " print number line in front of lines
 set ruler " obvious ?
 set shiftround " round indent of multiple of shiftwidht
