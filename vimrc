@@ -30,6 +30,7 @@ set encoding=utf8
 set expandtab
 set fileencoding=utf8
 set hidden
+set history=1000
 set hlsearch
 set ignorecase
 set incsearch
