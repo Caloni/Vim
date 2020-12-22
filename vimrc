@@ -38,18 +38,18 @@ set makeprg=cmake\ --build\ .
 set number
 set ruler
 set shiftround
-set shiftwidth=4
+set shiftwidth=2
 set showfulltag
 set smartcase
 set smarttab
-set softtabstop=4
+set softtabstop=2
 set statusline+=%m
 set statusline+=%n
 set statusline+=\ %=
 set statusline+=\ %F
 set statusline+=\ %P
 set statusline+=\ %l,%c
-set tabstop=4
+set tabstop=2
 set tags=tags;
 set undodir=$HOMEPATH/vimfiles/undo
 set undofile
