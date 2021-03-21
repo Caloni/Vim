@@ -2,3 +2,4 @@ vim*/
 *.swp
 undo/*
 backup/*
+.netrwhist
